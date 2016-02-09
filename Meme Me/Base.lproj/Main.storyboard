@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IQh-dH-2ru">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IQh-dH-2ru">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem title="IMAGE" id="UoQ-Mi-h8b">
@@ -35,11 +35,24 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQ9-01-xDx">
-                                <rect key="frame" x="20" y="97" width="335" height="442"/>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="srV-7j-UTS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="Jk9-Jj-VAi">
+                                        <barButtonItem key="leftBarButtonItem" title="SHARE" id="Y9E-uO-TWX">
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="createMeme:" destination="BYZ-38-t0r" id="YQr-y8-pIc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQ9-01-xDx">
+                                <rect key="frame" x="20" y="113" width="335" height="442"/>
                             </imageView>
                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" clearsOnBeginEditing="YES" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="3cg-qy-NhZ">
-                                <rect key="frame" x="20" y="490" width="335" height="30"/>
+                                <rect key="frame" x="20" y="506" width="335" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
@@ -57,7 +70,7 @@
                                 </connections>
                             </textField>
                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" clearsOnBeginEditing="YES" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="sOF-TT-Hqa">
-                                <rect key="frame" x="20" y="112" width="335" height="36"/>
+                                <rect key="frame" x="20" y="128" width="335" height="36"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
@@ -77,22 +90,33 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IQh-dH-2ru" firstAttribute="top" secondItem="hQ9-01-xDx" secondAttribute="bottom" constant="84" id="1M7-U9-K0z" userLabel="ImageView-Bottom"/>
-                            <constraint firstItem="hQ9-01-xDx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="9Rk-hE-tLM" userLabel="ImageView-Right"/>
-                            <constraint firstItem="IQh-dH-2ru" firstAttribute="top" secondItem="3cg-qy-NhZ" secondAttribute="bottom" constant="103" id="B3w-cS-K2p" userLabel="BottomTextField - Bottom"/>
-                            <constraint firstItem="IQh-dH-2ru" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="EOT-dw-AUp" userLabel="Toolbar-Left"/>
-                            <constraint firstItem="IQh-dH-2ru" firstAttribute="top" secondItem="hQ9-01-xDx" secondAttribute="bottom" constant="84" id="Ghz-cJ-Ek1" userLabel="Toolbar-Top"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="IQh-dH-2ru" secondAttribute="trailing" constant="-20" id="KqI-A3-CoL" userLabel="Toolbar-Right"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IQh-dH-2ru" secondAttribute="bottom" id="VZq-i7-5k3" userLabel="Toolbar-Bottom"/>
-                            <constraint firstItem="sOF-TT-Hqa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="92" id="ZY0-sl-b67" userLabel="TopTextField-Top"/>
-                            <constraint firstItem="hQ9-01-xDx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dKu-JL-Jmj" userLabel="ImageView-Left"/>
-                            <constraint firstItem="hQ9-01-xDx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="77" id="enG-IK-80Q" userLabel="ImageView-Top"/>
+                            <constraint firstItem="3cg-qy-NhZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1De-ik-Zq8" userLabel="BottomText-Left"/>
+                            <constraint firstItem="srV-7j-UTS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="1cU-Rm-8c8" userLabel="NavigationBar-Left"/>
+                            <constraint firstItem="sOF-TT-Hqa" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4XU-oG-q6z" userLabel="TopText-Right"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="srV-7j-UTS" secondAttribute="trailing" constant="-20" id="Avw-Iq-AKN" userLabel="NavigationBar-Right"/>
+                            <constraint firstItem="sOF-TT-Hqa" firstAttribute="top" secondItem="srV-7j-UTS" secondAttribute="bottom" constant="84" id="Fb8-YZ-k0M" userLabel="TopText-Top"/>
+                            <constraint firstItem="3cg-qy-NhZ" firstAttribute="top" secondItem="sOF-TT-Hqa" secondAttribute="bottom" constant="342" id="H2f-zT-OSs" userLabel="BottomText-Top"/>
+                            <constraint firstItem="IQh-dH-2ru" firstAttribute="top" secondItem="hQ9-01-xDx" secondAttribute="bottom" constant="68" id="Ha6-hK-d8T" userLabel="ImageView-Bottom"/>
+                            <constraint firstItem="3cg-qy-NhZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JgY-7j-TJL" userLabel="BottomText-Right"/>
+                            <constraint firstItem="3cg-qy-NhZ" firstAttribute="top" secondItem="sOF-TT-Hqa" secondAttribute="bottom" constant="342" id="P8f-gV-NJB" userLabel="TopText-Bottom"/>
+                            <constraint firstItem="srV-7j-UTS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Twl-Bc-idR" userLabel="NavigationBar-Top"/>
+                            <constraint firstItem="sOF-TT-Hqa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UTR-Cy-TfM" userLabel="TopText-Left"/>
+                            <constraint firstItem="hQ9-01-xDx" firstAttribute="top" secondItem="srV-7j-UTS" secondAttribute="bottom" constant="69" id="UiL-S7-4eT" userLabel="NavigationBar-Bottom"/>
+                            <constraint firstItem="hQ9-01-xDx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Vy6-BN-fsT" userLabel="ImageView-Left"/>
+                            <constraint firstItem="IQh-dH-2ru" firstAttribute="top" secondItem="3cg-qy-NhZ" secondAttribute="bottom" constant="87" id="c96-O0-57s" userLabel="BottomText-Bottom"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IQh-dH-2ru" secondAttribute="bottom" id="fO6-aQ-cx2" userLabel="Toolbar-Bottom"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IQh-dH-2ru" secondAttribute="trailing" constant="-20" id="kC3-s9-t27" userLabel="Toolbar-Right"/>
+                            <constraint firstItem="hQ9-01-xDx" firstAttribute="top" secondItem="srV-7j-UTS" secondAttribute="bottom" constant="69" id="kTX-oU-tjU" userLabel="ImageView-Top"/>
+                            <constraint firstItem="IQh-dH-2ru" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ncn-Fu-53e" userLabel="Toolbar-Left"/>
+                            <constraint firstItem="hQ9-01-xDx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qLt-EL-kZ7" userLabel="ImageView-Right"/>
+                            <constraint firstItem="IQh-dH-2ru" firstAttribute="top" secondItem="hQ9-01-xDx" secondAttribute="bottom" constant="68" id="xFk-aB-xNO" userLabel="Toolbar-Top"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="bottomTextField" destination="3cg-qy-NhZ" id="tYg-QW-4vb"/>
                         <outlet property="chooseImageView" destination="hQ9-01-xDx" id="GuD-2l-b0l"/>
+                        <outlet property="createMeme" destination="Y9E-uO-TWX" id="fOm-ZS-XXn"/>
                         <outlet property="topTextField" destination="sOF-TT-Hqa" id="XA7-9L-o0v"/>
                     </connections>
                 </viewController>
