@@ -116,7 +116,6 @@
                     <connections>
                         <outlet property="bottomTextField" destination="3cg-qy-NhZ" id="tYg-QW-4vb"/>
                         <outlet property="chooseImageView" destination="hQ9-01-xDx" id="GuD-2l-b0l"/>
-                        <outlet property="createMeme" destination="Y9E-uO-TWX" id="fOm-ZS-XXn"/>
                         <outlet property="topTextField" destination="sOF-TT-Hqa" id="XA7-9L-o0v"/>
                     </connections>
                 </viewController>
