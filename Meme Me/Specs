@@ -18,9 +18,9 @@
 
 
 1. Meme Editor View: Enables a user to add text to an image and share it.
-    -Consists of an image view overlaid by two text fields.
-        -One near the top.
-        -One near the bottom of the image.
+    ✓Consists of an image view overlaid by two text fields.
+        ✓One near the top.
+        ✓One near the bottom of the image.
     ✓Has a bottom toolbar with two buttons.
         ✓One for the camera.
         ✓One for the photo album.

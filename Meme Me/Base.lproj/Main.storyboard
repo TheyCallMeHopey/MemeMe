@@ -38,22 +38,62 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQ9-01-xDx">
                                 <rect key="frame" x="20" y="97" width="335" height="442"/>
                             </imageView>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" clearsOnBeginEditing="YES" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="3cg-qy-NhZ">
+                                <rect key="frame" x="20" y="490" width="335" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="BOTTOM">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="30" name="Impact"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="go"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GN6-WL-xCA"/>
+                                </connections>
+                            </textField>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" clearsOnBeginEditing="YES" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="sOF-TT-Hqa">
+                                <rect key="frame" x="20" y="112" width="335" height="36"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="TOP">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="30" name="Impact"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="go"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ggz-DH-dg7"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="IQh-dH-2ru" firstAttribute="top" secondItem="hQ9-01-xDx" secondAttribute="bottom" constant="84" id="1M7-U9-K0z" userLabel="ImageView-Bottom"/>
                             <constraint firstItem="hQ9-01-xDx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="9Rk-hE-tLM" userLabel="ImageView-Right"/>
+                            <constraint firstItem="IQh-dH-2ru" firstAttribute="top" secondItem="3cg-qy-NhZ" secondAttribute="bottom" constant="103" id="B3w-cS-K2p" userLabel="BottomTextField - Bottom"/>
                             <constraint firstItem="IQh-dH-2ru" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="EOT-dw-AUp" userLabel="Toolbar-Left"/>
                             <constraint firstItem="IQh-dH-2ru" firstAttribute="top" secondItem="hQ9-01-xDx" secondAttribute="bottom" constant="84" id="Ghz-cJ-Ek1" userLabel="Toolbar-Top"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IQh-dH-2ru" secondAttribute="trailing" constant="-20" id="KqI-A3-CoL" userLabel="Toolbar-Right"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IQh-dH-2ru" secondAttribute="bottom" id="VZq-i7-5k3" userLabel="Toolbar-Bottom"/>
+                            <constraint firstItem="sOF-TT-Hqa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="92" id="ZY0-sl-b67" userLabel="TopTextField-Top"/>
                             <constraint firstItem="hQ9-01-xDx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dKu-JL-Jmj" userLabel="ImageView-Left"/>
                             <constraint firstItem="hQ9-01-xDx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="77" id="enG-IK-80Q" userLabel="ImageView-Top"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="bottomTextField" destination="3cg-qy-NhZ" id="tYg-QW-4vb"/>
                         <outlet property="chooseImageView" destination="hQ9-01-xDx" id="GuD-2l-b0l"/>
+                        <outlet property="topTextField" destination="sOF-TT-Hqa" id="XA7-9L-o0v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

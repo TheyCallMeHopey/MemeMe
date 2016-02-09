@@ -8,13 +8,36 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate
 {
     @IBOutlet weak var chooseImageView: UIImageView!
+    @IBOutlet weak var topTextField: UITextField!
+    @IBOutlet weak var bottomTextField: UITextField!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        let memeTextAttributes = [NSStrokeColorAttributeName : UIColor.blackColor(), NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!, NSStrokeWidthAttributeName : -3.0]
+        
+        topTextField.defaultTextAttributes = memeTextAttributes
+        bottomTextField.defaultTextAttributes = memeTextAttributes
+        topTextField.textAlignment = NSTextAlignment.Center
+        bottomTextField.textAlignment = NSTextAlignment.Center
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {
+        if textField == topTextField
+        {
+            topTextField.resignFirstResponder()
+        }
+        else if textField == bottomTextField
+        {
+            bottomTextField.resignFirstResponder()
+        }
+        
+        return true;
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
@@ -23,6 +46,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         {
             chooseImageView.image = image
             self.dismissViewControllerAnimated(true, completion: nil)
+            topTextField.hidden = false;
+            bottomTextField.hidden = false;
         }
     }
     
