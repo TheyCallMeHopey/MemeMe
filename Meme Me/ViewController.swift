@@ -26,6 +26,43 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomTextField.textAlignment = NSTextAlignment.Center
     }
     
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        self.subscribeToKeyboardNotifications()
+    }
+    
+    override func viewWillDisappear(animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+        self.unsubscribeFromKeyboardNotifications()
+    }
+   
+    func keyboardWillShow(notification: NSNotification)
+    {
+        if bottomTextField.isFirstResponder()
+        {
+            self.view.frame.origin.y -= getKeyboardHeight(notification)
+        }
+    }
+    
+    func subscribeToKeyboardNotifications()
+    {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+    }
+    
+    func unsubscribeFromKeyboardNotifications()
+    {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+    }
+    
+    func getKeyboardHeight(notification: NSNotification) -> CGFloat
+    {
+        let userInfo = notification.userInfo!
+        let keyboardSize = userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue
+        return keyboardSize.CGRectValue().height
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool
     {
         if textField == topTextField
@@ -35,6 +72,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         else if textField == bottomTextField
         {
             bottomTextField.resignFirstResponder()
+            self.view.frame.origin.y = 0
         }
         
         return true;
