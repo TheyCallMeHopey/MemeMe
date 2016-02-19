@@ -43,3 +43,15 @@
     -Displays the selected meme in an image view in the center of the page with the meme’s original aspect ratio.
     -The detail view has a back arrow in the top left corner.
     -To the right of the arrow reads the title of the previous view, “Sent Memes.”
+
+
+FIX:
+-Hiding and showing the navagation bar and toolbar
+-Moving the navagation bar and tool bar (it doesn't go back to its original state after you close the keyboard)
+-If you drop down with no text, then add text, the borders disapear
+-Change the icons/buttons
+
+
+
+
+

@@ -21,22 +21,31 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IQh-dH-2ru">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bmG-Yx-Cie"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xsZ-Dg-bcS"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="16i-ep-gPn"/>
                                     <barButtonItem title="IMAGE" id="UoQ-Mi-h8b">
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="chooseImage:" destination="BYZ-38-t0r" id="6eF-hL-Ni3"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="DnW-cV-fdR"/>
                                     <barButtonItem title="CAMERA" id="UME-Yn-dVz">
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="openCamera:" destination="BYZ-38-t0r" id="cWu-Ig-mu0"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="klL-S8-2gE"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="HWS-qm-OX6"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Vfq-TU-ljB"/>
                                 </items>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="srV-7j-UTS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem id="Jk9-Jj-VAi">
                                         <barButtonItem key="leftBarButtonItem" title="SHARE" id="Y9E-uO-TWX">
@@ -88,7 +97,7 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3cg-qy-NhZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1De-ik-Zq8" userLabel="BottomText-Left"/>
                             <constraint firstItem="srV-7j-UTS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="1cU-Rm-8c8" userLabel="NavigationBar-Left"/>

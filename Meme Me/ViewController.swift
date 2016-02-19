@@ -24,39 +24,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     
-    @IBAction func chooseImage(sender: AnyObject)
-    {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
-        presentViewController(imagePicker, animated: true, completion: nil)
-    }
-    
-    @IBAction func openCamera(sender: AnyObject)
-    {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
-        {
-            let chooseImage = UIImagePickerController()
-            chooseImage.delegate = self
-            chooseImage.sourceType = UIImagePickerControllerSourceType.Camera
-            presentViewController(chooseImage, animated: true, completion: nil)
-        }
-        else
-        {
-            let alertController = UIAlertController(title: "", message: " CAMERA IS UNAVAILABLE", preferredStyle: .Alert)
-            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil )
-            
-            alertController.addAction(okAction)
-            presentViewController(alertController, animated: true, completion: nil )
-        }
-    }
-    
-    @IBAction func createMeme(sender: AnyObject)
-    {
-        let nextController = UIActivityViewController(activityItems: [meme.memedImage], applicationActivities: nil)
-        self.presentViewController(nextController, animated: true, completion: nil)
-    }
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -152,6 +119,40 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     {
         meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: chooseImageView.image!, memedImage: generateMemedImage())
     }
-
+    
+    @IBAction func chooseImage(sender: AnyObject)
+    {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func openCamera(sender: AnyObject)
+    {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
+        {
+            let chooseImage = UIImagePickerController()
+            chooseImage.delegate = self
+            chooseImage.sourceType = UIImagePickerControllerSourceType.Camera
+            presentViewController(chooseImage, animated: true, completion: nil)
+        }
+        else
+        {
+            let alertController = UIAlertController(title: "", message: " CAMERA IS UNAVAILABLE", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil )
+            
+            alertController.addAction(okAction)
+            presentViewController(alertController, animated: true, completion: nil )
+        }
+    }
+    
+    @IBAction func createMeme(sender: AnyObject)
+    {
+        let theMemedImage = generateMemedImage()
+        
+        let nextController = UIActivityViewController(activityItems: [theMemedImage], applicationActivities: nil)
+        self.presentViewController(nextController, animated: true, completion: nil)
+    }
 }
 
