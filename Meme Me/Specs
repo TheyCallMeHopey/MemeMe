@@ -46,10 +46,15 @@
 
 
 FIX:
--Hiding and showing the navagation bar and toolbar
--Moving the navagation bar and tool bar (it doesn't go back to its original state after you close the keyboard)
+-portrait and landscape mode
+-Change the toolBar and navigationBar item size
+
+-User can choose between different fonts
+-User can crop image
 -If you drop down with no text, then add text, the borders disapear
--Change the icons/buttons
+-App displays exceptional graphic design
+
+-Hiding and showing the navagation bar and toolbar
 
 
 

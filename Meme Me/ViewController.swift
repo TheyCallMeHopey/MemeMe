@@ -23,6 +23,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var chooseImageView: UIImageView!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
+    @IBOutlet weak var toolBar: UIToolbar!
+    @IBOutlet weak var navigationBar: UINavigationBar!
     
     override func viewDidLoad()
     {
@@ -103,6 +105,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     {
         //TODO: Hide toolbar and navbar
         //self.navigationController!.navigationBar.hidden = true
+        //navigationBar.hidden = true
+        //toolBar.hidden = true
         
         UIGraphicsBeginImageContext(self.view.frame.size)
         self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
@@ -111,6 +115,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         //TODO: Show toolbar and navbar
         //self.navigationController!.navigationBar.hidden = false
+        //navigationBar.hidden = false
+        //toolBar.hidden = false
         
         return memedImage
     }
@@ -139,7 +145,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         else
         {
-            let alertController = UIAlertController(title: "", message: " CAMERA IS UNAVAILABLE", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "", message: "CAMERA IS UNAVAILABLE", preferredStyle: .Alert)
             let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil )
             
             alertController.addAction(okAction)
