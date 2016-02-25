@@ -80,6 +80,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return keyboardSize.CGRectValue().height
     }
     
+    func textFieldDidBeginEditing(textField: UITextField)
+    {
+        if textField.text == "TOP" || textField.text == "BOTTOM"
+        {
+            textField.text = ""
+        }
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool
     {
         if textField == topTextField

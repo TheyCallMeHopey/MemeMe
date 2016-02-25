@@ -46,10 +46,7 @@
 
 
 FIX:
--If you drop down with no text, then add text, the borders disapear
-
--Cancel Icon (button over image?)
--I need on the image to move... not the whole screen and keep the image size
+-I need the image to move... not the whole screen and keep the image size
 
 -landscape mode?
 -User can choose between different fonts
