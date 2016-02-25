@@ -58,6 +58,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    func keyboardWillHide(notification: NSNotification)
+    {
+        self.view.frame.origin.y = 0
+    }
+    
     func subscribeToKeyboardNotifications()
     {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
@@ -65,7 +70,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func unsubscribeFromKeyboardNotifications()
     {
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
     }
     
     func getKeyboardHeight(notification: NSNotification) -> CGFloat
@@ -104,20 +109,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     func generateMemedImage() -> UIImage
     {
-        //TODO: Hide toolbar and navbar
-        //self.navigationController!.navigationBar.hidden = true
-        //navigationBar.hidden = true
-        //toolBar.hidden = true
+        navigationBar.hidden = true
+        toolBar.hidden = true
         
         UIGraphicsBeginImageContext(self.view.frame.size)
         self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
         let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
-        //TODO: Show toolbar and navbar
-        //self.navigationController!.navigationBar.hidden = false
-        //navigationBar.hidden = false
-        //toolBar.hidden = false
+        navigationBar.hidden = false
+        toolBar.hidden = false
         
         return memedImage
     }
@@ -159,7 +160,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topTextField.hidden = true
         bottomTextField.hidden = true
         chooseImageView.hidden = true
-        
     }
     
     @IBAction func createMeme(sender: AnyObject)

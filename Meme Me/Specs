@@ -8,9 +8,9 @@
  the editor.
 ✓When a user clicks inside one of the text fields, the default text disappears and the keyboard slides up.
 ✓When the user finishes entering text and presses return, the keyboard is dismissed and the new meme is displayed.
--When the user presses the share button, Apple’s stock Activity View appears, displaying several options for sharing the meme.
--After an option is chosen, the Activity View is dismissed and the Sent Memes View appears.
--The Sent Memes View also appears upon pressing the “Cancel” button.
+✓When the user presses the share button, Apple’s stock Activity View appears, displaying several options for sharing the meme.
+✓After an option is chosen, the Activity View is dismissed and the Sent Memes View appears.
+✓The Sent Memes View also appears upon pressing the “Cancel” button.
 -Selecting a meme from the table or collection presents the Meme Detail View.
 -Clicking on the  back arrow of the Meme Detail View presents the previous Sent Memes View, either the table or collection.
 
@@ -24,7 +24,7 @@
     ✓Has a bottom toolbar with two buttons.
         ✓One for the camera.
         ✓One for the photo album.
-    -The top navigation bar has a share button on the left displaying Apple’s stock share icon and a “Cancel” button on the right.
+    ✓The top navigation bar has a share button on the left displaying Apple’s stock share icon and a “Cancel” button on the right.
 
 
 2. Sent Memes View: Enables a user to browse sent memes in a table or a grid.
@@ -48,13 +48,11 @@
 FIX:
 -If you drop down with no text, then add text, the borders disapear
 
--portrait and landscape mode
--Hiding and showing the navagation bar and toolbar
+-Cancel Icon (button over image?)
+-I need on the image to move... not the whole screen and keep the image size
 
+-landscape mode?
 -User can choose between different fonts
 -User can crop image
-
-
-
 
 
