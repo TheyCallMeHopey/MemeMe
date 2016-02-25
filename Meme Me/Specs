@@ -46,15 +46,13 @@
 
 
 FIX:
+-If you drop down with no text, then add text, the borders disapear
+
 -portrait and landscape mode
--Change the toolBar and navigationBar item size
+-Hiding and showing the navagation bar and toolbar
 
 -User can choose between different fonts
 -User can crop image
--If you drop down with no text, then add text, the borders disapear
--App displays exceptional graphic design
-
--Hiding and showing the navagation bar and toolbar
 
 
 

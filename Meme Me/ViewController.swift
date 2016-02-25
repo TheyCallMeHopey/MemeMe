@@ -33,8 +33,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let memeTextAttributes = [NSStrokeColorAttributeName : UIColor.blackColor(), NSForegroundColorAttributeName : UIColor.whiteColor(), NSFontAttributeName : UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!, NSStrokeWidthAttributeName : -3.0]
         
         topTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.defaultTextAttributes = memeTextAttributes
         topTextField.textAlignment = NSTextAlignment.Center
+        bottomTextField.defaultTextAttributes = memeTextAttributes
         bottomTextField.textAlignment = NSTextAlignment.Center
     }
     
@@ -96,8 +96,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         {
             chooseImageView.image = image
             self.dismissViewControllerAnimated(true, completion: nil)
-            topTextField.hidden = false;
-            bottomTextField.hidden = false;
+            topTextField.hidden = false
+            bottomTextField.hidden = false
+            chooseImageView.hidden = false
         }
     }
     
@@ -151,6 +152,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             alertController.addAction(okAction)
             presentViewController(alertController, animated: true, completion: nil )
         }
+    }
+    
+    @IBAction func cancel(sender: AnyObject)
+    {
+        topTextField.hidden = true
+        bottomTextField.hidden = true
+        chooseImageView.hidden = true
+        
     }
     
     @IBAction func createMeme(sender: AnyObject)

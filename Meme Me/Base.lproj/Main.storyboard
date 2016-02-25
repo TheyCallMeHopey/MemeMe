@@ -18,31 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IQh-dH-2ru">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <items>
-                                    <barButtonItem systemItem="camera" id="UME-Yn-dVz">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <action selector="openCamera:" destination="BYZ-38-t0r" id="cWu-Ig-mu0"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bmG-Yx-Cie"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xsZ-Dg-bcS"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="16i-ep-gPn"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="DnW-cV-fdR"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="klL-S8-2gE"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="HWS-qm-OX6"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Vfq-TU-ljB"/>
-                                    <barButtonItem title="ALBUM" id="UoQ-Mi-h8b">
-                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <action selector="chooseImage:" destination="BYZ-38-t0r" id="6eF-hL-Ni3"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </toolbar>
                             <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="srV-7j-UTS">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -54,8 +29,11 @@
                                                 <action selector="createMeme:" destination="BYZ-38-t0r" id="YQr-y8-pIc"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="CANCEL" id="5jg-D3-y0X">
+                                        <barButtonItem key="rightBarButtonItem" image="CancelIcon" id="5jg-D3-y0X">
                                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="cancel:" destination="BYZ-38-t0r" id="54I-eB-Ipb"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -99,6 +77,31 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ggz-DH-dg7"/>
                                 </connections>
                             </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IQh-dH-2ru">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="UME-Yn-dVz">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="openCamera:" destination="BYZ-38-t0r" id="cWu-Ig-mu0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bmG-Yx-Cie"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xsZ-Dg-bcS"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="16i-ep-gPn"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="DnW-cV-fdR"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="klL-S8-2gE"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="HWS-qm-OX6"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Vfq-TU-ljB"/>
+                                    <barButtonItem image="AlbumIcon" id="UoQ-Mi-h8b">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="chooseImage:" destination="BYZ-38-t0r" id="6eF-hL-Ni3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -138,4 +141,8 @@
             <point key="canvasLocation" x="304.5" y="387.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AlbumIcon" width="20" height="20"/>
+        <image name="CancelIcon" width="20" height="20"/>
+    </resources>
 </document>
