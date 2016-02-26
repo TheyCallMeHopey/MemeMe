@@ -30,7 +30,7 @@
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="||||" id="VDm-cc-EU8" userLabel="Cancel">
-                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="cancel:" destination="BYZ-38-t0r" id="8jZ-pS-wEf"/>
                                             </connections>
@@ -102,7 +102,7 @@
                                 </items>
                                 <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CancelIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cD6-po-o9F">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="CancelIcon" translatesAutoresizingMaskIntoConstraints="NO" id="cD6-po-o9F">
                                 <rect key="frame" x="335" y="28" width="26" height="29"/>
                             </imageView>
                         </subviews>
@@ -116,11 +116,14 @@
                             <constraint firstItem="3cg-qy-NhZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JgY-7j-TJL" userLabel="BottomText-Right"/>
                             <constraint firstItem="sOF-TT-Hqa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UTR-Cy-TfM" userLabel="TopText-Left"/>
                             <constraint firstItem="hQ9-01-xDx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Vy6-BN-fsT" userLabel="ImageView-Left"/>
+                            <constraint firstItem="cD6-po-o9F" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="aNV-BG-Up0" userLabel="CancelIcon-Top"/>
                             <constraint firstItem="IQh-dH-2ru" firstAttribute="top" secondItem="3cg-qy-NhZ" secondAttribute="bottom" constant="87" id="c96-O0-57s" userLabel="BottomText-Bottom"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IQh-dH-2ru" secondAttribute="bottom" id="fO6-aQ-cx2" userLabel="Toolbar-Bottom"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IQh-dH-2ru" secondAttribute="trailing" constant="-20" id="kC3-s9-t27" userLabel="Toolbar-Right"/>
                             <constraint firstItem="IQh-dH-2ru" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ncn-Fu-53e" userLabel="Toolbar-Left"/>
                             <constraint firstItem="hQ9-01-xDx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qLt-EL-kZ7" userLabel="ImageView-Right"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cD6-po-o9F" secondAttribute="trailing" constant="-6" id="v9K-ru-Y8D" userLabel="CancelIcon-Right"/>
+                            <constraint firstItem="cD6-po-o9F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="315" id="vru-b1-DcX" userLabel="CancelIcon-Left"/>
                             <constraint firstItem="sOF-TT-Hqa" firstAttribute="top" secondItem="srV-7j-UTS" secondAttribute="bottom" constant="64" id="wHV-Ma-GO2" userLabel="TopText-Top"/>
                             <constraint firstItem="IQh-dH-2ru" firstAttribute="top" secondItem="hQ9-01-xDx" secondAttribute="bottom" constant="68" id="xFk-aB-xNO" userLabel="Toolbar-Top"/>
                             <constraint firstItem="srV-7j-UTS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zVk-lt-3sc" userLabel="NavigationBar-Top"/>
