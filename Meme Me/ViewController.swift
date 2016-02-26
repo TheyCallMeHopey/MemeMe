@@ -38,6 +38,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomTextField.textAlignment = NSTextAlignment.Center
     }
     
+    override func prefersStatusBarHidden() -> Bool
+    {
+        return true
+    }
+    
     override func viewWillAppear(animated: Bool)
     {
         super.viewWillAppear(animated)
@@ -52,6 +57,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
    
     func keyboardWillShow(notification: NSNotification)
     {
+        if self.view.frame.origin.y != 0
+        {
+            return
+        }
+        
         if bottomTextField.isFirstResponder()
         {
             self.view.frame.origin.y -= getKeyboardHeight(notification)
