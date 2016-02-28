@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MemeEditorViewController.swift
 //  Meme Me
 //
 //  Created by Hope on 12/1/15.
@@ -16,7 +16,7 @@ struct Meme
     var memedImage: UIImage
 }
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate
+class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate
 {
     var meme: Meme!
     
@@ -46,31 +46,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewWillAppear(animated: Bool)
     {
         super.viewWillAppear(animated)
-        self.subscribeToKeyboardNotifications()
+        subscribeToKeyboardNotifications()
     }
     
     override func viewWillDisappear(animated: Bool)
     {
         super.viewWillDisappear(animated)
-        self.unsubscribeFromKeyboardNotifications()
+        unsubscribeFromKeyboardNotifications()
     }
    
     func keyboardWillShow(notification: NSNotification)
     {
-        if self.view.frame.origin.y != 0
-        {
-            return
-        }
-        
         if bottomTextField.isFirstResponder()
         {
-            self.view.frame.origin.y -= getKeyboardHeight(notification)
+            view.frame.origin.y = -getKeyboardHeight(notification)
         }
     }
     
     func keyboardWillHide(notification: NSNotification)
     {
-        self.view.frame.origin.y = 0
+        view.frame.origin.y = 0
     }
     
     func subscribeToKeyboardNotifications()
@@ -107,7 +102,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         else if textField == bottomTextField
         {
             bottomTextField.resignFirstResponder()
-            self.view.frame.origin.y = 0
+            view.frame.origin.y = 0
         }
         
         return true;
@@ -118,7 +113,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
         {
             chooseImageView.image = image
-            self.dismissViewControllerAnimated(true, completion: nil)
+            dismissViewControllerAnimated(true, completion: nil)
             topTextField.hidden = false
             bottomTextField.hidden = false
             chooseImageView.hidden = false
@@ -130,8 +125,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         navigationBar.hidden = true
         toolBar.hidden = true
         
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.drawViewHierarchyInRect(view.frame, afterScreenUpdates: true)
         let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -178,6 +173,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topTextField.hidden = true
         bottomTextField.hidden = true
         chooseImageView.hidden = true
+        topTextField.text = "TOP"
+        bottomTextField.text = "BOTTOM"
     }
     
     @IBAction func createMeme(sender: AnyObject)
@@ -185,7 +182,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let theMemedImage = generateMemedImage()
         
         let nextController = UIActivityViewController(activityItems: [theMemedImage], applicationActivities: nil)
-        self.presentViewController(nextController, animated: true, completion: nil)
+        presentViewController(nextController, animated: true, completion: nil)
     }
 }
 
