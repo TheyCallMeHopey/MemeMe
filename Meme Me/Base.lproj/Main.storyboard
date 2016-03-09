@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="v8D-8A-J49">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xe6-hw-wHi">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -45,7 +45,7 @@
         <!--Meme View-->
         <scene sceneID="4VW-ba-tu7">
             <objects>
-                <viewController title="Meme View" id="cYz-kz-88s" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemeViewController" title="Meme View" id="cYz-kz-88s" customClass="MemeViewController" customModule="Meme_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LCp-lJ-sdI"/>
                         <viewControllerLayoutGuide type="bottom" id="KIt-vX-Nld"/>
@@ -68,6 +68,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="75u-kb-F1v"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="memeImage" destination="MJm-Qa-ecF" id="SYH-dC-QGX"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="edit" id="5Ur-Ep-b8l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXE-GA-Luc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,13 +116,13 @@
         <!--Table View-->
         <scene sceneID="aCy-gu-E5j">
             <objects>
-                <tableViewController title="Table View" id="iVr-xD-dx1" sceneMemberID="viewController">
+                <tableViewController title="Table View" id="iVr-xD-dx1" customClass="MemeTableViewController" customModule="Meme_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="moo-7E-wXe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Scb-KV-0jC">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" id="Scb-KV-0jC">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Scb-KV-0jC" id="Lkk-R4-wbz">
@@ -146,7 +150,31 @@
                             <outlet property="delegate" destination="iVr-xD-dx1" id="TS2-ly-eVr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Y53-DD-FY7" userLabel="SAVED MEMES"/>
+                    <navigationItem key="navigationItem" id="Y53-DD-FY7" userLabel="Saved Memes">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="Muc-Uo-CxZ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AnF-Ql-juK">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="EDIT">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="LRK-N7-m4R">
+                            <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wqg-5r-VzK">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="35"/>
+                                <state key="normal" title="      +">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="v8D-8A-J49" kind="presentation" id="isc-P6-lJg"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97r-21-Zmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -156,10 +184,11 @@
         <!--Collection View-->
         <scene sceneID="4XB-G8-hhd">
             <objects>
-                <collectionViewController title="Collection View" id="tHD-1i-F4W" sceneMemberID="viewController">
+                <collectionViewController title="Collection View" id="tHD-1i-F4W" customClass="MemeCollectionViewController" customModule="Meme_Me" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Z2I-8x-5NT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8ka-1o-k4B">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -167,18 +196,19 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="kUL-Ag-ve2">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemeCollectionViewCell" id="kUL-Ag-ve2" customClass="MemeCollectionViewCell" customModule="Meme_Me" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GSV-Xx-fgC" userLabel="Meme Image View">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CancelIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GSV-Xx-fgC" userLabel="Meme Image View">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bqa-dM-azL" userLabel="Delete Image View">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CancelIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Bqa-dM-azL" userLabel="Delete Image View">
                                             <rect key="frame" x="28" y="0.0" width="22" height="18"/>
+                                            <color key="tintColor" red="0.72156862749999995" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -189,6 +219,10 @@
                                     <constraint firstItem="GSV-Xx-fgC" firstAttribute="leading" secondItem="kUL-Ag-ve2" secondAttribute="leadingMargin" constant="-8" id="PDd-Zf-KPv"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="GSV-Xx-fgC" secondAttribute="trailing" constant="-8" id="hGo-oj-rUh"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="deleteImageView" destination="Bqa-dM-azL" id="HCV-9q-oxm"/>
+                                    <outlet property="memeImageView" destination="GSV-Xx-fgC" id="Opo-4D-hJn"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -196,7 +230,31 @@
                             <outlet property="delegate" destination="tHD-1i-F4W" id="R7s-L1-zdr"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="rgA-QY-B3u"/>
+                    <navigationItem key="navigationItem" id="rgA-QY-B3u">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="F3M-Br-zU6">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pPC-tS-XxV">
+                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="EDIT">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="fSl-EE-kQZ">
+                            <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="p0G-QX-Yel">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="35"/>
+                                <state key="normal" title="      +">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="v8D-8A-J49" kind="presentation" id="HRh-TJ-amJ"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KS6-Eh-an8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -355,5 +413,10 @@
     </scenes>
     <resources>
         <image name="AlbumIcon" width="20" height="20"/>
+        <image name="CancelIcon" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="5Ur-Ep-b8l"/>
+        <segue reference="HRh-TJ-amJ"/>
+    </inferredMetricsTieBreakers>
 </document>
