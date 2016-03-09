@@ -29,14 +29,14 @@
 
 2. Sent Memes View: Enables a user to browse sent memes in a table or a grid.
     -Displays recently sent memes.
-    -It has a bottom toolbar with tabs that allow the user to toggle between viewing sent memes.
-        -In a table
-        -In a grid.
-    -The top navigation bar has a title that reads “Sent Memes” and an add button in the right corner displaying Apple’s stock “Add” icon.
+    ✓It has a bottom toolbar with tabs that allow the user to toggle between viewing sent memes.
+        ✓In a table
+        ✓In a grid.
+    ✓The top navigation bar has a title that reads “Sent Memes” and an add button in the right corner displaying Apple’s stock “Add” icon.
     -If the user taps the “table” tab on the left of the bottom toolbar, sent memes are displayed in a table.
     -If the user taps on the “collection” tab on the right of the bottom toolbar, sent memes are displayed in a grid.
     -Selecting a meme from the table or collection presents the Meme Detail View.
-    -Pressing the “add” button brings up the Meme Editor View.
+    ✓Pressing the “add” button brings up the Meme Editor View.
 
 
 3. Meme Detail View: Displays an image of a sent meme.
@@ -46,5 +46,9 @@
 
 
 FIX:
+-Delete Image
+-After you share/save an image, it needs to go back to the table/collection view
+-Make sure edit works (deleting)
+-Make sure all the images save and show up in table/collection view
 
 

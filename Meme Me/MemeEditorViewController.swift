@@ -143,8 +143,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         let object = UIApplication.sharedApplication().delegate
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)
-        
-        //TODO: go to Saved Meme View
     }
     
     @IBAction func chooseImage(sender: AnyObject)
@@ -176,12 +174,13 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBAction func cancel(sender: AnyObject)
     {
-        //TODO: goes to Saved Meme View
         topTextField.hidden = true
         bottomTextField.hidden = true
         chooseImageView.hidden = true
         topTextField.text = "TOP"
         bottomTextField.text = "BOTTOM"
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func createMeme(sender: AnyObject)

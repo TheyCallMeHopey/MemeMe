@@ -18,7 +18,7 @@ class MemeViewController : UIViewController
     {
         super.viewDidLoad()
         
-        self.memeImage.image = meme.memedImage
+        memeImage.image = meme.memedImage
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
@@ -29,15 +29,15 @@ class MemeViewController : UIViewController
             {
                 let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
                 
-                applicationDelegate.editMeme = self.meme
+                applicationDelegate.editMeme = meme
             }
         }
     }
     
     func editMeme()
     {
-        self.dismissViewControllerAnimated(true, completion: nil)
-        self.performSegueWithIdentifier("edit", sender: self)
+        dismissViewControllerAnimated(true, completion: nil)
+        performSegueWithIdentifier("edit", sender: self)
     }
     
     func deleteMeme()
@@ -46,7 +46,7 @@ class MemeViewController : UIViewController
         
         applicationDelegate.memes.removeLast()
         
-        self.navigationController?.popViewControllerAnimated(true)
+        navigationController?.popViewControllerAnimated(true)
     }
 
 }

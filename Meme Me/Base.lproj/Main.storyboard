@@ -176,6 +176,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="view" destination="moo-7E-wXe" id="soI-Zd-c3O"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97r-21-Zmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -203,7 +206,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CancelIcon" translatesAutoresizingMaskIntoConstraints="NO" id="GSV-Xx-fgC" userLabel="Meme Image View">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GSV-Xx-fgC" userLabel="Meme Image View">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CancelIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Bqa-dM-azL" userLabel="Delete Image View">
@@ -256,6 +259,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="flowLayout" destination="8ka-1o-k4B" id="iks-At-uN5"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KS6-Eh-an8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -416,7 +422,7 @@
         <image name="CancelIcon" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5Ur-Ep-b8l"/>
-        <segue reference="HRh-TJ-amJ"/>
+        <segue reference="isc-P6-lJg"/>
+        <segue reference="579-68-lni"/>
     </inferredMetricsTieBreakers>
 </document>

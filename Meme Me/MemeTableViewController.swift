@@ -25,8 +25,8 @@ class MemeTableViewController : UITableViewController
         
         updateMemes()
         
-        self.editing = false
-        self.tableView.reloadData()
+        editing = false
+        tableView.reloadData()
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -44,7 +44,7 @@ class MemeTableViewController : UITableViewController
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("TableViewCell")!
-        let meme = self.memes[indexPath.row]
+        let meme = memes[indexPath.row]
 
         cell.textLabel?.text = meme.topText + "-" + meme.bottomText
         cell.detailTextLabel?.text = ""
@@ -56,10 +56,10 @@ class MemeTableViewController : UITableViewController
     //Display in Meme View
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        let memeViewController = self.storyboard!.instantiateViewControllerWithIdentifier("MemeViewController") as! MemeViewController
-        memeViewController.meme   = self.memes[indexPath.row]
+        let memeViewController = storyboard!.instantiateViewControllerWithIdentifier("MemeViewController") as! MemeViewController
+        memeViewController.meme   = memes[indexPath.row]
         
-        self.navigationController!.pushViewController(memeViewController, animated: true)
+        navigationController!.pushViewController(memeViewController, animated: true)
     }
     
     //Move the item
@@ -77,12 +77,12 @@ class MemeTableViewController : UITableViewController
         memes.removeAtIndex(indexPath.row)
         
         applicationDelegate.memes = memes
-        self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
 
     func edit()
     {
-        self.editing = !self.editing
+        editing = !editing
     }
     
     func updateMemes()

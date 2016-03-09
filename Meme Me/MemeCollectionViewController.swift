@@ -11,10 +11,20 @@ import UIKit
 class MemeCollectionViewController : UICollectionViewController
 {
     var memes: [Meme]!
+    
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
         
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        let space: CGFloat = 3.0
+        let dimension = (view.frame.size.width - (2 * space)) / 3.0
+        //TODO: add the height for when it's landscape mode
+        
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.minimumLineSpacing = space
+        flowLayout.itemSize = CGSizeMake(dimension, dimension)
         
         updateMemes()
     }
@@ -25,7 +35,7 @@ class MemeCollectionViewController : UICollectionViewController
         
         updateMemes()
         
-        self.collectionView?.reloadData()
+        collectionView?.reloadData()
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -36,9 +46,9 @@ class MemeCollectionViewController : UICollectionViewController
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MemeCollectionViewCell", forIndexPath: indexPath) as! MemeCollectionViewCell
-        let meme = self.memes[indexPath.row]
+        let meme = memes[indexPath.row]
         
-        if (self.editing)
+        if (editing)
         {
             cell.deleteImageView.hidden = false
         }
@@ -55,11 +65,11 @@ class MemeCollectionViewController : UICollectionViewController
     //Selecting
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath)
     {
-        if (!self.editing)
+        if (!editing)
         {
-            let memeViewController = self.storyboard!.instantiateViewControllerWithIdentifier("MemeViewController") as! MemeViewController
-            memeViewController.meme = self.memes[indexPath.row]
-            self.navigationController!.pushViewController(memeViewController, animated: true)
+            let memeViewController = storyboard!.instantiateViewControllerWithIdentifier("MemeViewController") as! MemeViewController
+            memeViewController.meme = memes[indexPath.row]
+            navigationController!.pushViewController(memeViewController, animated: true)
         }
         else
         {
@@ -70,27 +80,11 @@ class MemeCollectionViewController : UICollectionViewController
             self.collectionView?.reloadData()
         }
     }
-    
-    //Spacing and border
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat
-    {
-            return CGFloat(10.0)
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat
-    {
-        return CGFloat(-8.0)
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets
-    {
-            return UIEdgeInsets(top: 10.0, left: 10.0, bottom: 10.0, right: 10.0)
-    }
 
     func edit()
     {
-        self.editing = !self.editing
-        self.collectionView?.reloadData()
+        editing = !editing
+        collectionView?.reloadData()
     }
     
     func updateMemes()
