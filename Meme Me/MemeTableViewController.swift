@@ -43,12 +43,13 @@ class MemeTableViewController : UITableViewController
     //Set up
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier("TableViewCell")!
+        let cell = tableView.dequeueReusableCellWithIdentifier("TableViewCell", forIndexPath: indexPath)
         let meme = memes[indexPath.row]
-
+        
+        cell.imageView!.image = meme.memedImage
+        cell.imageView!.contentMode = .ScaleAspectFill
         cell.textLabel?.text = meme.topText + "-" + meme.bottomText
         cell.detailTextLabel?.text = ""
-        cell.imageView?.image = meme.memedImage
         
         return cell
     }
@@ -57,7 +58,7 @@ class MemeTableViewController : UITableViewController
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         let memeViewController = storyboard!.instantiateViewControllerWithIdentifier("MemeViewController") as! MemeViewController
-        memeViewController.meme   = memes[indexPath.row]
+        memeViewController.meme = memes[indexPath.row]
         
         navigationController!.pushViewController(memeViewController, animated: true)
     }
