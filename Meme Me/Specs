@@ -11,7 +11,7 @@
 ✓When the user presses the share button, Apple’s stock Activity View appears, displaying several options for sharing the meme.
 ✓After an option is chosen, the Activity View is dismissed and the Sent Memes View appears.
 ✓The Sent Memes View also appears upon pressing the “Cancel” button.
--Selecting a meme from the table or collection presents the Meme Detail View.
+✓Selecting a meme from the table or collection presents the Meme Detail View.
 -Clicking on the  back arrow of the Meme Detail View presents the previous Sent Memes View, either the table or collection.
 
 
@@ -33,9 +33,9 @@
         ✓In a table
         ✓In a grid.
     ✓The top navigation bar has a title that reads “Sent Memes” and an add button in the right corner displaying Apple’s stock “Add” icon.
-    -If the user taps the “table” tab on the left of the bottom toolbar, sent memes are displayed in a table.
-    -If the user taps on the “collection” tab on the right of the bottom toolbar, sent memes are displayed in a grid.
-    -Selecting a meme from the table or collection presents the Meme Detail View.
+    ✓If the user taps the “table” tab on the left of the bottom toolbar, sent memes are displayed in a table.
+    ✓If the user taps on the “collection” tab on the right of the bottom toolbar, sent memes are displayed in a grid.
+    ✓Selecting a meme from the table or collection presents the Meme Detail View.
     ✓Pressing the “add” button brings up the Meme Editor View.
 
 
@@ -49,6 +49,5 @@ FIX:
 -Delete Image
 -After you share/save an image, it needs to go back to the table/collection view
 -Make sure edit works (deleting)
--Make sure all the images save and show up in table/collection view
 
 

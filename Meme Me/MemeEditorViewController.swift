@@ -189,6 +189,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         let nextController = UIActivityViewController(activityItems: [theMemedImage], applicationActivities: nil)
         presentViewController(nextController, animated: true, completion: nil)
+        
+        save()
     }
 }
 
