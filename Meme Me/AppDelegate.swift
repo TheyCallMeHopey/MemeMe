@@ -17,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
     {
+        UITabBar.appearance().tintColor = UIColor.blackColor()
+        
+        //TODO: Change the color, font, and size of the back button
+//        let customFont = UIFont(name: "HelveticaNeue-ThinBlack", size: 17.0)
+//        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: customFont!], forState: UIControlState.Normal)
+        
         return true
     }
 

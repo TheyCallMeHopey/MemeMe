@@ -48,7 +48,7 @@ class MemeTableViewController : UITableViewController
         
         cell.imageView!.image = meme.memedImage
         cell.imageView!.contentMode = .ScaleAspectFill
-        cell.textLabel?.text = meme.topText + "-" + meme.bottomText
+        cell.textLabel?.text = meme.topText + " " + meme.bottomText
         cell.detailTextLabel?.text = ""
         
         return cell

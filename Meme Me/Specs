@@ -1,5 +1,5 @@
--When the user first launches the app, the Sent Memes View will appear. It will be the root view of the navigation stack.
--When the user taps the + button in the top right corner the app should push the Meme Editor View on top of the Sent Memes
+✓When the user first launches the app, the Sent Memes View will appear. It will be the root view of the navigation stack.
+✓When the user taps the + button in the top right corner the app should push the Meme Editor View on top of the Sent Memes
  View.
 ✓In the Meme Editor View, when the user clicks on the “Album” button, an Image Picker is presented, making it possible to choose an image from the Photo Album.
 ✓If there is a camera available on the device, pressing the camera button launches the camera, and a newly snapped photo can be chosen for the meme.
@@ -12,7 +12,7 @@
 ✓After an option is chosen, the Activity View is dismissed and the Sent Memes View appears.
 ✓The Sent Memes View also appears upon pressing the “Cancel” button.
 ✓Selecting a meme from the table or collection presents the Meme Detail View.
--Clicking on the  back arrow of the Meme Detail View presents the previous Sent Memes View, either the table or collection.
+✓Clicking on the  back arrow of the Meme Detail View presents the previous Sent Memes View, either the table or collection.
 
 
 
@@ -28,7 +28,7 @@
 
 
 2. Sent Memes View: Enables a user to browse sent memes in a table or a grid.
-    -Displays recently sent memes.
+    ✓Displays recently sent memes.
     ✓It has a bottom toolbar with tabs that allow the user to toggle between viewing sent memes.
         ✓In a table
         ✓In a grid.
@@ -40,14 +40,19 @@
 
 
 3. Meme Detail View: Displays an image of a sent meme.
-    -Displays the selected meme in an image view in the center of the page with the meme’s original aspect ratio.
-    -The detail view has a back arrow in the top left corner.
+    ✓Displays the selected meme in an image view in the center of the page with the meme’s original aspect ratio.
+    ✓The detail view has a back arrow in the top left corner.
     -To the right of the arrow reads the title of the previous view, “Sent Memes.”
 
 
 FIX:
 -Delete Image
 -After you share/save an image, it needs to go back to the table/collection view
--Make sure edit works (deleting)
+-Make sure edit works in table and collection (deleting)
 
+-If you save a blank page, send a message
+
+-Table image view
+-The plus sign on the table view (line it up like the collection view)
+-Change the text color and font for the back button in meme view
 

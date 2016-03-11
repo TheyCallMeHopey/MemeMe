@@ -48,5 +48,4 @@ class MemeViewController : UIViewController
         
         navigationController?.popViewControllerAnimated(true)
     }
-
 }
