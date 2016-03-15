@@ -165,10 +165,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         else
         {
             let alertController = UIAlertController(title: "", message: "CAMERA IS UNAVAILABLE", preferredStyle: .Alert)
-            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil )
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
             
             alertController.addAction(okAction)
-            presentViewController(alertController, animated: true, completion: nil )
+            presentViewController(alertController, animated: true, completion: nil)
         }
     }
     
@@ -185,12 +185,24 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBAction func createMeme(sender: AnyObject)
     {
-        let theMemedImage = generateMemedImage()
+        if(topTextField.text == "TOP" || topTextField.text == "" || bottomTextField.text == "BOTTOM" || bottomTextField.text == "")
+        {
+            let alertController = UIAlertController(title: "", message: "YOUR MEME IS NOT FINISHED", preferredStyle: .Alert)
+            let okAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            
+            alertController.addAction(okAction)
+            presentViewController(alertController, animated: true, completion: nil)
+        }
         
-        let nextController = UIActivityViewController(activityItems: [theMemedImage], applicationActivities: nil)
-        presentViewController(nextController, animated: true, completion: nil)
-        
-        save()
+        else
+        {
+            let theMemedImage = generateMemedImage()
+            
+            let nextController = UIActivityViewController(activityItems: [theMemedImage], applicationActivities: nil)
+            presentViewController(nextController, animated: true, completion: nil)
+            
+            save()
+        }
     }
 }
 

@@ -90,7 +90,12 @@ class MemeCollectionViewController : UICollectionViewController
             navigationController!.pushViewController(memeViewController, animated: true)
         }
     }
-
+    
+    @IBAction func deleteButton(sender: AnyObject)
+    {
+        
+    }
+    
     func edit()
     {
         editing = !editing
