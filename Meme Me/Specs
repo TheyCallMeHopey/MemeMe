@@ -46,9 +46,9 @@
 
 
 FIX:
--Delete Image
 -After you share/save an image, it needs to go back to the table/collection view
--Make sure edit works in table and collection (deleting)
+-Make sure edit works in collection (deleting)
+-DOES EDIT BUTON NEED TO BE THERE FOR THE TABLE?
 
 -If you save a blank page, send a message
 -If you save an image with no text, send a message

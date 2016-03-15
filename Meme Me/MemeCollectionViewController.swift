@@ -14,6 +14,11 @@ class MemeCollectionViewController : UICollectionViewController
     
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
+    @IBAction func editButton(sender: AnyObject)
+    {
+        edit()
+    }
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -60,11 +65,6 @@ class MemeCollectionViewController : UICollectionViewController
         cell.memeImageView?.image = meme.memedImage
         
         return cell
-    }
-
-    @IBAction func editButton(sender: AnyObject)
-    {
-        edit()
     }
     
     //Selecting
