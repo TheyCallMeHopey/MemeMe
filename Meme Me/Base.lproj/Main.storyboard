@@ -262,7 +262,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         </imageView>
                                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVg-1j-A3n" userLabel="Cancel Button">
-                                            <rect key="frame" x="30" y="0.0" width="20" height="21"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <state key="normal" title="deleteButton" image="CancelIcon"/>
                                         </button>
                                     </subviews>

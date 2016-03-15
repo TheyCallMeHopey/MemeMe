@@ -48,6 +48,7 @@ class MemeCollectionViewController : UICollectionViewController
         return memes.count
     }
     
+    //Set up
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MemeCollectionViewCell", forIndexPath: indexPath) as! MemeCollectionViewCell
@@ -67,21 +68,24 @@ class MemeCollectionViewController : UICollectionViewController
         return cell
     }
     
-    //Selecting
+    //Selecting and deleting
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath)
     {
         if (editing)
         {
             let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-            memes.removeAtIndex(indexPath.row)
+            applicationDelegate.memes.removeAtIndex(indexPath.item)
             
+            memes.removeAtIndex(indexPath.item)
             applicationDelegate.memes = memes
             collectionView.deleteItemsAtIndexPaths([indexPath])
+            
             self.collectionView?.reloadData()
         }
-        else
+        else if (!editing)
         {
             let memeViewController = storyboard!.instantiateViewControllerWithIdentifier("MemeViewController") as! MemeViewController
+            
             memeViewController.meme = memes[indexPath.row]
             navigationController!.pushViewController(memeViewController, animated: true)
         }

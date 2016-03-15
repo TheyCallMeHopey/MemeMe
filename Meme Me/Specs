@@ -49,6 +49,7 @@ FIX:
 -After you share/save an image, it needs to go back to the table/collection view
 -Make sure edit works in collection (deleting)
 -DOES EDIT BUTON NEED TO BE THERE FOR THE TABLE?
+-EditButton should be hidden unless there are memes in the table/collection view
 
 -If you save a blank page, send a message
 -If you save an image with no text, send a message

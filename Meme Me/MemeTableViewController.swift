@@ -54,7 +54,7 @@ class MemeTableViewController : UITableViewController
         return cell
     }
     
-    //Display in Meme View
+    //Selecting
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         let memeViewController = storyboard!.instantiateViewControllerWithIdentifier("MemeViewController") as! MemeViewController
@@ -63,7 +63,7 @@ class MemeTableViewController : UITableViewController
         navigationController!.pushViewController(memeViewController, animated: true)
     }
     
-    //Move the item
+    //Move meme
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath)
     {
         let moveItem = memes[fromIndexPath.row]
@@ -80,7 +80,6 @@ class MemeTableViewController : UITableViewController
             applicationDelegate.memes.removeAtIndex(indexPath.row)
             memes = applicationDelegate.memes
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
-            //tableView.reloadData()
         }
     }
 
