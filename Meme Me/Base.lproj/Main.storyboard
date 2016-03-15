@@ -473,6 +473,7 @@
                         <outlet property="navigationBar" destination="srV-7j-UTS" id="23X-yn-kZk"/>
                         <outlet property="toolBar" destination="IQh-dH-2ru" id="xwg-Up-JMs"/>
                         <outlet property="topTextField" destination="sOF-TT-Hqa" id="XA7-9L-o0v"/>
+                        <segue destination="cYz-kz-88s" kind="push" identifier="edit" id="ufK-5k-HtZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -486,6 +487,7 @@
         <image name="TableIcon" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="ufK-5k-HtZ"/>
         <segue reference="HRh-TJ-amJ"/>
     </inferredMetricsTieBreakers>
 </document>
