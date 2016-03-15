@@ -51,8 +51,10 @@ FIX:
 -Make sure edit works in table and collection (deleting)
 
 -If you save a blank page, send a message
+-If you save an image with no text, send a message
 
 -Table image view
 -The plus sign on the table view (line it up like the collection view)
+-Make the collection view images bigger
 -Change the text color and font for the back button in meme view
 

@@ -21,31 +21,31 @@ class MemeViewController : UIViewController
         memeImage.image = meme.memedImage
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    {
-        if segue.identifier == "edit"
-        {
-            if let _ = segue.destinationViewController as? MemeEditorViewController
-            {
-                let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-                
-                applicationDelegate.editMeme = meme
-            }
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+//    {
+//        if segue.identifier == "edit"
+//        {
+//            if let _ = segue.destinationViewController as? MemeEditorViewController
+//            {
+//                let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+//                
+//                applicationDelegate.editMeme = meme
+//            }
+//        }
+//    }
     
-    func editMeme()
-    {
-        dismissViewControllerAnimated(true, completion: nil)
-        performSegueWithIdentifier("edit", sender: self)
-    }
-    
-    func deleteMeme()
-    {
-        let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-        
-        applicationDelegate.memes.removeLast()
-        
-        navigationController?.popViewControllerAnimated(true)
-    }
+//    func editMeme()
+//    {
+//        dismissViewControllerAnimated(true, completion: nil)
+//        performSegueWithIdentifier("edit", sender: self)
+//    }
+//    
+//    func deleteMeme()
+//    {
+//        let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+//        
+//        applicationDelegate.memes.removeLast()
+//        
+//        navigationController?.popViewControllerAnimated(true)
+//    }
 }

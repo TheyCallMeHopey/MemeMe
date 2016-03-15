@@ -70,7 +70,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="memeImage" destination="MJm-Qa-ecF" id="SYH-dC-QGX"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="edit" id="5Ur-Ep-b8l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXE-GA-Luc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -259,24 +258,18 @@
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GSV-Xx-fgC" userLabel="Meme Image View">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GSV-Xx-fgC" userLabel="Meme Image View">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CancelIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Bqa-dM-azL" userLabel="Delete Image View">
-                                            <rect key="frame" x="28" y="0.0" width="22" height="18"/>
-                                            <color key="tintColor" red="0.72156862749999995" green="0.0" blue="0.023529411760000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        </imageView>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVg-1j-A3n" userLabel="Cancel Button">
+                                            <rect key="frame" x="30" y="0.0" width="20" height="21"/>
+                                            <state key="normal" title="deleteButton" image="CancelIcon"/>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstAttribute="bottomMargin" secondItem="GSV-Xx-fgC" secondAttribute="bottom" constant="-8" id="45z-Eu-2jx"/>
-                                    <constraint firstItem="GSV-Xx-fgC" firstAttribute="top" secondItem="kUL-Ag-ve2" secondAttribute="topMargin" constant="-8" id="OQO-Sf-QpA"/>
-                                    <constraint firstItem="GSV-Xx-fgC" firstAttribute="leading" secondItem="kUL-Ag-ve2" secondAttribute="leadingMargin" constant="-8" id="PDd-Zf-KPv"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="GSV-Xx-fgC" secondAttribute="trailing" constant="-8" id="hGo-oj-rUh"/>
-                                </constraints>
                                 <connections>
-                                    <outlet property="deleteImageView" destination="Bqa-dM-azL" id="HCV-9q-oxm"/>
+                                    <outlet property="deleteButton" destination="vVg-1j-A3n" id="nSI-bZ-SsO"/>
                                     <outlet property="memeImageView" destination="GSV-Xx-fgC" id="Opo-4D-hJn"/>
                                 </connections>
                             </collectionViewCell>
@@ -302,6 +295,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="editButton:" destination="tHD-1i-F4W" eventType="touchUpInside" id="eQz-hf-tba"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="fSl-EE-kQZ">
@@ -490,7 +486,6 @@
         <image name="TableIcon" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5Ur-Ep-b8l"/>
-        <segue reference="isc-P6-lJg"/>
+        <segue reference="HRh-TJ-amJ"/>
     </inferredMetricsTieBreakers>
 </document>
