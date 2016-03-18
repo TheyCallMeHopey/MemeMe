@@ -54,7 +54,11 @@ FIX:
 -Table image view
 -The plus sign on the table view (line it up like the collection view)
 -Make the collection view images bigger
+-Why does tthe editor image overlap?
 -Change the text color and font for the back button in meme view
+
+
+**** "If you try saving an unfinished meme, an alert pops up."
 
 
 

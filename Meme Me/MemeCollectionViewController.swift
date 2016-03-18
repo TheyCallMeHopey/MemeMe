@@ -78,7 +78,6 @@ class MemeCollectionViewController : UICollectionViewController
             
             memes.removeAtIndex(indexPath.item)
             applicationDelegate.memes = memes
-            collectionView.deleteItemsAtIndexPaths([indexPath])
             
             self.collectionView?.reloadData()
         }
@@ -93,7 +92,6 @@ class MemeCollectionViewController : UICollectionViewController
     
     @IBAction func deleteButton(sender: AnyObject)
     {
-        
     }
     
     func edit()

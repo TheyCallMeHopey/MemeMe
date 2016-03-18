@@ -262,7 +262,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         </imageView>
                                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVg-1j-A3n" userLabel="Delete Button">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="30" y="0.0" width="20" height="20"/>
                                             <state key="normal" title="deleteButton" image="CancelIcon"/>
                                             <connections>
                                                 <action selector="deleteButton:" destination="tHD-1i-F4W" eventType="touchUpInside" id="Vtq-XM-ovj"/>
