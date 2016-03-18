@@ -150,23 +150,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Y53-DD-FY7" userLabel="Saved Memes">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="Muc-Uo-CxZ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="AnF-Ql-juK">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="EDIT">
-                                            <attributes>
-                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="17" name="HelveticaNeue-Thin"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                            </button>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="LRK-N7-m4R">
                             <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="wqg-5r-VzK">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
@@ -326,6 +309,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="editButton" destination="pPC-tS-XxV" id="osm-9B-9Ro"/>
                         <outlet property="flowLayout" destination="8ka-1o-k4B" id="iks-At-uN5"/>
                     </connections>
                 </collectionViewController>
@@ -491,6 +475,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ufK-5k-HtZ"/>
-        <segue reference="HRh-TJ-amJ"/>
+        <segue reference="isc-P6-lJg"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -13,6 +13,7 @@ class MemeCollectionViewController : UICollectionViewController
     var memes: [Meme]!
     
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var editButton: UIButton!
     
     @IBAction func editButton(sender: AnyObject)
     {
@@ -41,6 +42,16 @@ class MemeCollectionViewController : UICollectionViewController
         updateMemes()
         
         collectionView?.reloadData()
+        
+        if (memes.count == 0)
+        {
+            editButton.hidden = true
+        }
+        
+        else
+        {
+            editButton.hidden = false
+        }
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
