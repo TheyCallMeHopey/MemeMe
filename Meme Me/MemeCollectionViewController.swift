@@ -82,11 +82,18 @@ class MemeCollectionViewController : UICollectionViewController
     //Selecting and deleting
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath)
     {
+        
+    }
+    
+    @IBAction func deleteButton(sender: AnyObject)
+    {
+        let indexPath = collectionView!.indexPathsForSelectedItems()! as [NSIndexPath]
+        
         if (editing)
         {
             let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
             applicationDelegate.memes.removeAtIndex(indexPath.item)
-            
+
             memes.removeAtIndex(indexPath.item)
             applicationDelegate.memes = memes
             
@@ -99,10 +106,6 @@ class MemeCollectionViewController : UICollectionViewController
             memeViewController.meme = memes[indexPath.row]
             navigationController!.pushViewController(memeViewController, animated: true)
         }
-    }
-    
-    @IBAction func deleteButton(sender: AnyObject)
-    {
     }
     
     func edit()
