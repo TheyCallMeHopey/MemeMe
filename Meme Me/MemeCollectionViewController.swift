@@ -25,12 +25,10 @@ class MemeCollectionViewController : UICollectionViewController
         super.viewDidLoad()
         
         let space: CGFloat = 5.0
-        let dimension = (view.frame.size.width - (5.0 * space)) / 5.0
-        //TODO: add the height for when it's landscape mode
         
         flowLayout.minimumInteritemSpacing = space
         flowLayout.minimumLineSpacing = space
-        flowLayout.itemSize = CGSizeMake(dimension, dimension)
+        flowLayout.itemSize = CGSizeMake(100, 100)
         
         updateMemes()
     }
@@ -67,11 +65,11 @@ class MemeCollectionViewController : UICollectionViewController
         
         if (editing)
         {
-            cell.deleteButton.hidden = false
+            cell.deleteLabel.hidden = false
         }
         else
         {
-            cell.deleteButton.hidden = true
+            cell.deleteLabel.hidden = true
         }
         
         cell.memeImageView?.image = meme.memedImage
@@ -82,18 +80,11 @@ class MemeCollectionViewController : UICollectionViewController
     //Selecting and deleting
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath)
     {
-        
-    }
-    
-    @IBAction func deleteButton(sender: AnyObject)
-    {
-        let indexPath = collectionView!.indexPathsForSelectedItems()! as [NSIndexPath]
-        
         if (editing)
         {
             let applicationDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
             applicationDelegate.memes.removeAtIndex(indexPath.item)
-
+            
             memes.removeAtIndex(indexPath.item)
             applicationDelegate.memes = memes
             

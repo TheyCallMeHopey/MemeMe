@@ -242,20 +242,26 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GSV-Xx-fgC" userLabel="Meme Image View">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
                                         </imageView>
-                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVg-1j-A3n" userLabel="Delete Button">
-                                            <rect key="frame" x="30" y="0.0" width="20" height="20"/>
-                                            <state key="normal" title="deleteButton" image="CancelIcon"/>
-                                            <connections>
-                                                <action selector="deleteButton:" destination="tHD-1i-F4W" eventType="touchUpInside" id="Vtq-XM-ovj"/>
-                                            </connections>
-                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNk-xH-tvc">
+                                            <rect key="frame" x="0.0" y="0.0" width="115" height="115"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="X">
+                                                    <attributes>
+                                                        <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <font key="NSFont" size="96" name="GillSans-Light"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <outlet property="deleteButton" destination="vVg-1j-A3n" id="nSI-bZ-SsO"/>
+                                    <outlet property="deleteLabel" destination="BNk-xH-tvc" id="kF0-bd-HLi"/>
                                     <outlet property="memeImageView" destination="GSV-Xx-fgC" id="Opo-4D-hJn"/>
                                 </connections>
                             </collectionViewCell>
@@ -470,11 +476,10 @@
     </scenes>
     <resources>
         <image name="AlbumIcon" width="20" height="20"/>
-        <image name="CancelIcon" width="256" height="256"/>
         <image name="TableIcon" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ufK-5k-HtZ"/>
-        <segue reference="isc-P6-lJg"/>
+        <segue reference="HRh-TJ-amJ"/>
     </inferredMetricsTieBreakers>
 </document>

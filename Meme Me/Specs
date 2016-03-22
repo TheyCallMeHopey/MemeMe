@@ -47,12 +47,10 @@
 
 FIX:
 -After you share/save an image, it needs to go back to the table/collection view
--Make sure deleteButton works in collection
 
 -Table image view
 -The plus sign on the table view (line it up like the collection view)
--Make the collection view images bigger
--Why does tthe editor image overlap?
+-Why does the editor image overlap?
 -Why does the table view image overlap?
 -Change the text color and font for the back button in meme view
 

@@ -203,6 +203,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
             
             save()
         }
+        
+        //dismissViewControllerAnimated(true, completion: nil)
     }
 }
 
