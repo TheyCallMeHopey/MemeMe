@@ -146,46 +146,7 @@
                                         <fragment content="     +">
                                             <attributes>
                                                 <font key="NSFont" size="35" name="HelveticaNeue-UltraLight"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                    <tabStops>
-                                                        <textTab alignment="left" location="28">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="56">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="84">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="112">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="140">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="168">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="196">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="224">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="252">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="280">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="308">
-                                                            <options/>
-                                                        </textTab>
-                                                        <textTab alignment="left" location="336">
-                                                            <options/>
-                                                        </textTab>
-                                                    </tabStops>
-                                                </paragraphStyle>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -361,24 +322,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQ9-01-xDx">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                             </imageView>
-                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="3cg-qy-NhZ">
-                                <rect key="frame" x="20" y="506" width="335" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="BOTTOM">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="30" name="Impact"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GN6-WL-xCA"/>
-                                </connections>
-                            </textField>
                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="sOF-TT-Hqa">
                                 <rect key="frame" x="20" y="128" width="335" height="36"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -422,9 +365,28 @@
                                 </items>
                                 <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" usesAttributedText="YES" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="3cg-qy-NhZ">
+                                <rect key="frame" x="20" y="506" width="335" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="BOTTOM">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="30" name="Impact"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GN6-WL-xCA"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="hQ9-01-xDx" firstAttribute="top" secondItem="sOF-TT-Hqa" secondAttribute="bottom" constant="-117" id="07c-qg-xMI" userLabel="TopText-Top"/>
                             <constraint firstItem="hQ9-01-xDx" firstAttribute="top" secondItem="srV-7j-UTS" secondAttribute="bottom" id="0lN-fV-aRe" userLabel="ImageView-Top"/>
                             <constraint firstItem="3cg-qy-NhZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1De-ik-Zq8" userLabel="BottomText-Left"/>
                             <constraint firstItem="srV-7j-UTS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="1cU-Rm-8c8" userLabel="NavigationBar-Left"/>
@@ -432,13 +394,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="srV-7j-UTS" secondAttribute="trailing" constant="-20" id="Avw-Iq-AKN" userLabel="NavigationBar-Right"/>
                             <constraint firstItem="3cg-qy-NhZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="JgY-7j-TJL" userLabel="BottomText-Right"/>
                             <constraint firstItem="IQh-dH-2ru" firstAttribute="top" secondItem="hQ9-01-xDx" secondAttribute="bottom" id="Lrl-os-jr2" userLabel="ImageView-Bottom"/>
+                            <constraint firstItem="3cg-qy-NhZ" firstAttribute="top" secondItem="hQ9-01-xDx" secondAttribute="bottom" constant="-117" id="N8x-Jn-JHv" userLabel="BottomText-Bottom"/>
                             <constraint firstItem="sOF-TT-Hqa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UTR-Cy-TfM" userLabel="TopText-Left"/>
-                            <constraint firstItem="IQh-dH-2ru" firstAttribute="top" secondItem="3cg-qy-NhZ" secondAttribute="bottom" constant="87" id="c96-O0-57s" userLabel="BottomText-Bottom"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="IQh-dH-2ru" secondAttribute="bottom" id="fO6-aQ-cx2" userLabel="Toolbar-Bottom"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IQh-dH-2ru" secondAttribute="trailing" constant="-20" id="kC3-s9-t27" userLabel="Toolbar-Right"/>
                             <constraint firstItem="IQh-dH-2ru" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ncn-Fu-53e" userLabel="Toolbar-Left"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hQ9-01-xDx" secondAttribute="trailing" constant="-20" id="qzf-YC-Z3u" userLabel="ImageView-Right"/>
-                            <constraint firstItem="sOF-TT-Hqa" firstAttribute="top" secondItem="srV-7j-UTS" secondAttribute="bottom" constant="64" id="wHV-Ma-GO2" userLabel="TopText-Top"/>
                             <constraint firstItem="hQ9-01-xDx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="whP-5G-I1v" userLabel="ImageView-Left"/>
                             <constraint firstItem="srV-7j-UTS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zVk-lt-3sc" userLabel="NavigationBar-Top"/>
                         </constraints>
