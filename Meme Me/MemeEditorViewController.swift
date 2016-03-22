@@ -145,22 +145,25 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         appDelegate.memes.append(meme)
     }
     
-    @IBAction func chooseImage(sender: AnyObject)
+    func originalImage()
     {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func chooseImage(sender: AnyObject)
+    {
+        originalImage()
+        UIImagePickerControllerSourceType.PhotoLibrary
     }
     
     @IBAction func openCamera(sender: AnyObject)
     {
         if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera))
         {
-            let chooseImage = UIImagePickerController()
-            chooseImage.delegate = self
-            chooseImage.sourceType = UIImagePickerControllerSourceType.Camera
-            presentViewController(chooseImage, animated: true, completion: nil)
+            originalImage()
+            UIImagePickerControllerSourceType.Camera
         }
         else
         {
@@ -203,8 +206,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
             
             save()
         }
-        
-        //dismissViewControllerAnimated(true, completion: nil)
     }
 }
 

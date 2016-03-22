@@ -11,6 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
+    var meme: Meme!
     var window: UIWindow?
     var memes = [Meme]()
     var editMeme = Meme(topText: "TOP", bottomText: "BOTTOM", originalImage: UIImage(), memedImage: UIImage())
