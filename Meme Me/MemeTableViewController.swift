@@ -47,7 +47,7 @@ class MemeTableViewController : UITableViewController
         let meme = memes[indexPath.row]
         
         cell.imageView!.image = meme.memedImage
-        cell.imageView!.contentMode = .ScaleAspectFill
+        cell.imageView!.contentMode = .ScaleAspectFit
         cell.textLabel?.text = "  " + meme.topText + "  :  " + meme.bottomText
         cell.detailTextLabel?.text = ""
         
